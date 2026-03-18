@@ -8,12 +8,13 @@
 <body>
 
 <h1>Pi-Hem</h1>
-<p style="text-align:center; color:#6b7280;">
+<p class="subtitle">
   Installation och drift av hemmaväderstation med Raspberry Pi
 </p>
 
 <div class="nav">
   <a href="inkop.html">Inköpslista</a>
+  <a href="felsokning.html">Felsökning</a>
 </div>
 
 <!-- PI SETUP -->
@@ -21,12 +22,12 @@
 <details open>
 <summary>Raspberry Pi installation (Home Assistant OS)</summary>
 
-<p><b>Mål:</b> Få igång Home Assistant på din Raspberry Pi.</p>
+<p><b>Mål:</b> Installera och starta Home Assistant på din Raspberry Pi.</p>
 
 <ol>
 <li>
   Ladda ner Raspberry Pi Imager:
-  <br>
+  <br><br>
   <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" class="btn">
     Ladda ner Imager
   </a>
@@ -36,17 +37,17 @@
 
 <li>Öppna Imager och välj:
   <ul>
-    <li>Device: Raspberry Pi 5</li>
-    <li>OS: Other specific purpose OS → Home Assistant</li>
-    <li>Storage: ditt SD-kort</li>
+    <li><b>Device:</b> Raspberry Pi 5</li>
+    <li><b>OS:</b> Other specific purpose OS → Home Assistant</li>
+    <li><b>Storage:</b> ditt SD-kort</li>
   </ul>
 </li>
 
-<li>Klicka på kugghjulet (advanced settings):
+<li>Klicka på kugghjulet (Advanced settings):
   <ul>
     <li>Sätt hostname (t.ex. "homeassistant")</li>
-    <li>Aktivera SSH (valfritt men rekommenderas)</li>
-    <li>Ställ in WiFi endast om du inte kan använda kabel</li>
+    <li>Aktivera SSH (rekommenderas)</li>
+    <li>Ställ in WiFi endast om kabel inte används</li>
   </ul>
 </li>
 
@@ -55,14 +56,14 @@
 
 <li>Koppla in:
   <ul>
-    <li>Ethernet-kabel (rekommenderas starkt)</li>
-    <li>Strömadapter</li>
+    <li>Ethernet (rekommenderas)</li>
+    <li>Ström</li>
   </ul>
 </li>
 
-<li>Vänta 5–10 minuter på första uppstart</li>
+<li>Vänta 5–10 minuter (första start tar tid)</li>
 
-<li>Öppna i webbläsare:
+<li>Öppna:
   <br><code>http://homeassistant.local:8123</code>
 </li>
 
@@ -70,9 +71,9 @@
 
 <p><b>Viktigt:</b></p>
 <ul>
-<li>Använd Ethernet istället för WiFi för stabilitet</li>
-<li>Första uppstarten tar tid – avbryt inte</li>
-<li>SD-kort slits över tid – överväg SSD senare</li>
+<li>Använd Ethernet för stabilitet</li>
+<li>Avbryt inte första uppstarten</li>
+<li>SD-kort slits → överväg SSD senare</li>
 </ul>
 
 </details>
@@ -88,7 +89,7 @@
 
 <li>Ställ in:
   <ul>
-    <li>Plats (används för väder och tid)</li>
+    <li>Plats</li>
     <li>Tidszon</li>
   </ul>
 </li>
@@ -96,35 +97,35 @@
 <li>Installera tillägg:
   <ul>
     <li>File Editor</li>
-    <li>Samba Share (för åtkomst från dator)</li>
+    <li>Samba Share</li>
   </ul>
 </li>
 
-<li>Gå till Settings → System → Updates och uppdatera allt</li>
+<li>Settings → System → Updates → uppdatera allt</li>
 
 </ol>
 
 <p><b>Tips:</b></p>
 <ul>
-<li>Installera Home Assistant-appen på mobilen</li>
-<li>Ge systemet ett tydligt namn</li>
+<li>Installera mobilappen</li>
+<li>Döp systemet tydligt</li>
 </ul>
 
 </details>
 </div>
 
 <!-- NETWORK -->
-<div class="card">
+<div class="card section-network">
 <details>
 <summary>Nätverk</summary>
 
 <ul>
-<li>Raspberry Pi bör vara ansluten via Ethernet</li>
+<li>Använd Ethernet till Raspberry Pi</li>
 
 <li>Kameror kräver:
   <ul>
     <li>Router</li>
-    <li>PoE switch eller injector (om PoE används)</li>
+    <li>PoE switch/injector (om PoE)</li>
   </ul>
 </li>
 
@@ -141,21 +142,21 @@
 </div>
 
 <!-- STORAGE -->
-<div class="card">
+<div class="card section-storage">
 <details>
 <summary>Lagring</summary>
 
 <ul>
-<li>SD-kort fungerar men har begränsad livslängd</li>
+<li>SD-kort fungerar men slits</li>
 
-<li>Rekommenderat:
+<li>Rekommenderas:
   <ul>
     <li>USB SSD (bäst)</li>
-    <li>eller High Endurance SD-kort</li>
+    <li>eller High Endurance SD</li>
   </ul>
 </li>
 
-<li>Backup är extra viktigt om du använder SD-kort</li>
+<li>Backup är extra viktigt med SD</li>
 </ul>
 
 </details>
@@ -167,8 +168,8 @@
 <summary>Zigbee dongle (ZHA)</summary>
 
 <ol>
-<li>Koppla dongle via USB-förlängning</li>
-<li>Placera den bort från Raspberry Pi</li>
+<li>Använd USB-förlängning</li>
+<li>Placera bort från Pi</li>
 
 <li>I Home Assistant:
   <ul>
@@ -177,52 +178,50 @@
   </ul>
 </li>
 
-<li>Välj seriell port (auto fungerar oftast)</li>
+<li>Välj port (auto funkar oftast)</li>
 
 </ol>
 
 <p><b>Viktigt:</b></p>
 <ul>
-<li>Använd ZHA (inte deCONZ i detta projekt)</li>
-<li>Placering påverkar signalen mycket</li>
+<li>Använd ZHA</li>
+<li>Placering påverkar signal</li>
 </ul>
 
 </details>
 </div>
 
-<!-- ZIGBEE MESH -->
-<div class="card">
+<!-- MESH -->
+<div class="card section-mesh">
 <details>
 <summary>Zigbee räckvidd (mesh)</summary>
 
 <ul>
-<li>Batteridrivna sensorer har begränsad räckvidd</li>
+<li>Batterisensorer har kort räckvidd</li>
 
 <li>Lösning:
   <ul>
-    <li>Lägg till en Zigbee smart plug mellan hus och uthus</li>
-    <li>Den fungerar som repeater</li>
+    <li>Lägg till smart plug mellan enheter</li>
+    <li>Fungerar som repeater</li>
   </ul>
 </li>
-
-<li>Utan mesh kan sensorer tappa kontakt</li>
 
 </ul>
 
 </details>
 </div>
 
-<!-- SENSORS -->
+<!-- SENSOR -->
 <div class="card section-sensor">
 <details>
 <summary>Sensorer</summary>
 
 <ol>
-<li>Gå till ZHA → Add Device</li>
-<li>Sätt sensorn i pairing mode (håll knapp)</li>
-<li>Vänta tills den dyker upp</li>
+<li>ZHA → Add Device</li>
+<li>Håll knapp (pairing)</li>
+<li>Vänta</li>
 
-<li>Döp sensorer tydligt:
+<li>Döp tydligt:
   <ul>
     <li>Temp Inne</li>
     <li>Temp Ute</li>
@@ -233,18 +232,8 @@
 
 <p><b>Placering:</b></p>
 <ul>
-<li>Utomhus:
-  <ul>
-    <li>Skydda från regn</li>
-    <li>Undvik direkt solljus</li>
-  </ul>
-</li>
-
-<li>Inomhus:
-  <ul>
-    <li>Placera inte nära element</li>
-  </ul>
-</li>
+<li>Utomhus: skydda från regn & sol</li>
+<li>Inomhus: inte nära element</li>
 </ul>
 
 </details>
@@ -256,29 +245,24 @@
 <summary>IP-kamera</summary>
 
 <ol>
-<li>Anslut kameran till nätverket</li>
-<li>Ta reda på dess IP-adress</li>
+<li>Anslut till nätverk</li>
+<li>Hitta IP-adress</li>
 
-<li>I Home Assistant:
+<li>Add Integration:
   <ul>
-    <li>Add Integration</li>
-    <li>Välj ONVIF (rekommenderas) eller RTSP</li>
+    <li>ONVIF (bäst)</li>
+    <li>eller RTSP</li>
   </ul>
 </li>
 
-<li>Ange:
-  <ul>
-    <li>IP-adress</li>
-    <li>Användarnamn och lösenord</li>
-  </ul>
-</li>
+<li>Fyll i login</li>
 
 </ol>
 
 <p><b>Viktigt:</b></p>
 <ul>
-<li>Kameran måste stödja RTSP eller ONVIF</li>
-<li>PoE är stabilare än WiFi</li>
+<li>Måste stödja RTSP/ONVIF</li>
+<li>PoE > WiFi</li>
 </ul>
 
 </details>
@@ -290,26 +274,23 @@
 <summary>Dashboard</summary>
 
 <ol>
-<li>Gå till Dashboard → Edit</li>
-<li>Klicka Add Card</li>
+<li>Dashboard → Edit</li>
+<li>Add Card</li>
 
 <li>Lägg till:
   <ul>
-    <li>Temperatur inne</li>
-    <li>Temperatur ute</li>
+    <li>Temperatur</li>
     <li>Luftfuktighet</li>
-    <li>Kamerabild</li>
+    <li>Kamera</li>
   </ul>
 </li>
-
-<li>Ordna layouten så den är lätt att läsa</li>
 
 </ol>
 
 </details>
 </div>
 
-<!-- GRAPHS -->
+<!-- GRAPH -->
 <div class="card section-graph">
 <details>
 <summary>Grafer</summary>
@@ -317,7 +298,7 @@
 <ol>
 <li>Add Card → History Graph</li>
 <li>Välj sensorer</li>
-<li>Ställ in tidsintervall</li>
+<li>Ställ tid</li>
 </ol>
 
 </details>
@@ -328,59 +309,54 @@
 <details>
 <summary>Backup</summary>
 
-<p><b>Mål:</b> Kunna återställa systemet vid fel eller krasch.</p>
+<p><b>Mål:</b> Kunna återställa systemet.</p>
 
-<h4>Moln-backup</h4>
+<h4>Moln</h4>
 <ol>
-<li>Installera Google Drive Backup addon</li>
+<li>Installera Google Drive Backup</li>
 <li>Logga in</li>
-<li>Aktivera schemalagd backup</li>
+<li>Aktivera schema</li>
 </ol>
 
-<h4>Lokal backup</h4>
+<h4>Lokal</h4>
 <ol>
 <li>Settings → System → Backups</li>
 <li>Create Backup</li>
-<li>Ladda ner till dator</li>
+<li>Ladda ner</li>
 </ol>
 
-<h4>Viktigt</h4>
+<p><b>Viktigt:</b></p>
 <ul>
-<li>Spara backup utanför Raspberry Pi</li>
-<li>Ha både lokal och moln-backup</li>
-<li>Testa att återställa minst en gång</li>
+<li>Spara utanför Pi</li>
+<li>Ha minst 2 kopior</li>
 </ul>
 
 </details>
 </div>
 
 <!-- REMOTE -->
-<div class="card">
+<div class="card section-remote">
 <details>
 <summary>Åtkomst från mobilen</summary>
 
 <ul>
 <li>Enklast: Home Assistant Cloud</li>
-<li>Gratis alternativ:
-  <ul>
-    <li>Tailscale (rekommenderas)</li>
-    <li>Port forwarding (mer avancerat)</li>
-  </ul>
-</li>
+<li>Gratis: Tailscale</li>
+<li>Avancerat: Port forwarding</li>
 </ul>
 
 </details>
 </div>
 
 <!-- AUTOMATION -->
-<div class="card">
+<div class="card section-automation">
 <details>
 <summary>Automationer (valfritt)</summary>
 
 <ul>
 <li>Frostvarning</li>
 <li>Hög luftfuktighet</li>
-<li>Rörelselarm via kamera</li>
+<li>Rörelselarm</li>
 </ul>
 
 </details>
