@@ -131,3 +131,73 @@ h4 {
   font-size: 0.95rem;
   color: var(--muted);
 }
+
+/* BASE CARD ACCENT (fallback) */
+.card {
+  border-left: 6px solid #e5e7eb;
+}
+
+/* PI - pastel green */
+.section-pi {
+  border-left-color: #86efac;
+}
+
+/* HA - mint */
+.section-ha {
+  border-left-color: #6ee7b7;
+}
+
+/* NETWORK - soft blue */
+.section-network {
+  border-left-color: #93c5fd;
+}
+
+/* STORAGE - soft gray/blue */
+.section-storage {
+  border-left-color: #c7d2fe;
+}
+
+/* ZIGBEE - warm yellow */
+.section-zigbee {
+  border-left-color: #fde68a;
+}
+
+/* MESH - orange pastel */
+.section-mesh {
+  border-left-color: #fdba74;
+}
+
+/* SENSOR - teal */
+.section-sensor {
+  border-left-color: #5eead4;
+}
+
+/* CAMERA - purple */
+.section-camera {
+  border-left-color: #c4b5fd;
+}
+
+/* DASHBOARD - pink */
+.section-dashboard {
+  border-left-color: #f9a8d4;
+}
+
+/* GRAPH - sky */
+.section-graph {
+  border-left-color: #7dd3fc;
+}
+
+/* BACKUP - red pastel */
+.section-backup {
+  border-left-color: #fca5a5;
+}
+
+/* REMOTE - indigo */
+.section-remote {
+  border-left-color: #a5b4fc;
+}
+
+/* AUTOMATION - lime */
+.section-automation {
+  border-left-color: #bef264;
+}
