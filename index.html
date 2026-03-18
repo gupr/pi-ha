@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hemmaväderstation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Hemmaväderstation</h1>
+
+<div class="nav">
+  <a href="inkop.html">Inköpslista</a>
+</div>
+
+<details open>
+  <summary>1. Raspberry Pi installation</summary>
+  <ul>
+    <li>Installera Home Assistant via Raspberry Pi Imager</li>
+    <li>Sätt i SD-kort</li>
+    <li>Koppla nätverkskabel</li>
+    <li>Koppla ström</li>
+    <li>Öppna: <code>http://homeassistant.local:8123</code></li>
+  </ul>
+</details>
+
+<details>
+  <summary>2. Home Assistant setup</summary>
+  <ul>
+    <li>Skapa konto</li>
+    <li>Ställ in plats</li>
+    <li>Kontrollera dashboard</li>
+    <li>Installera File Editor + Samba</li>
+  </ul>
+</details>
+
+<details>
+  <summary>3. Zigbee dongle</summary>
+  <ul>
+    <li>Koppla via USB-förlängning</li>
+    <li>Settings → Devices & Services</li>
+    <li>Add Integration → ZHA</li>
+  </ul>
+</details>
+
+<details>
+  <summary>4. Sensorer</summary>
+  <ul>
+    <li>Klicka “Add device”</li>
+    <li>Håll in knapp på sensor</li>
+    <li>Placera inne/ute korrekt</li>
+  </ul>
+</details>
+
+<details>
+  <summary>5. IP-kamera</summary>
+  <ul>
+    <li>Add Integration</li>
+    <li>ONVIF eller RTSP</li>
+    <li>Verifiera bild</li>
+  </ul>
+</details>
+
+<details>
+  <summary>6. Dashboard</summary>
+  <ul>
+    <li>Edit Dashboard</li>
+    <li>Lägg till temperatur inne/ute</li>
+    <li>Lägg till luftfuktighet</li>
+    <li>Lägg till kamera</li>
+  </ul>
+</details>
+
+<details>
+  <summary>7. Backup</summary>
+  <ul>
+    <li>Installera backup addon</li>
+    <li>Aktivera automatiska backuper</li>
+  </ul>
+</details>
+
+<details>
+  <summary>8. Grafer</summary>
+  <ul>
+    <li>Add Card → History Graph</li>
+    <li>Välj temperatur + fukt</li>
+  </ul>
+</details>
+
+</body>
+</html>
