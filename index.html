@@ -4,10 +4,29 @@
   <meta charset="UTF-8">
   <title>Pi-Hem</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Snabba fixes */
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .nav a {
+      margin: 0 20px; /* mer spacing mellan länkar */
+    }
+  </style>
+
 </head>
 <body>
 
 <h1>Pi-Hem</h1>
+
 <p class="subtitle">
   Installation och drift av hemmaväderstation med Raspberry Pi
 </p>
@@ -63,7 +82,8 @@
 
 <li>Vänta 5–10 minuter (första start tar tid)</li>
 
-<li>Öppna:
+<li>
+  Öppna:
   <br><code>http://homeassistant.local:8123</code>
 </li>
 
@@ -186,26 +206,6 @@
 <ul>
 <li>Använd ZHA</li>
 <li>Placering påverkar signal</li>
-</ul>
-
-</details>
-</div>
-
-<!-- MESH -->
-<div class="card section-mesh">
-<details>
-<summary>Zigbee räckvidd (mesh)</summary>
-
-<ul>
-<li>Batterisensorer har kort räckvidd</li>
-
-<li>Lösning:
-  <ul>
-    <li>Lägg till smart plug mellan enheter</li>
-    <li>Fungerar som repeater</li>
-  </ul>
-</li>
-
 </ul>
 
 </details>
@@ -339,24 +339,17 @@
 <details>
 <summary>Åtkomst från mobilen</summary>
 
+<ol>
+<li>Ladda ner appen "Home Assistant"</li>
+<li>Öppna appen</li>
+<li>Skriv in: <code>http://homeassistant.local:8123</code></li>
+<li>Logga in</li>
+</ol>
+
+<p><b>Tips:</b></p>
 <ul>
-<li>Enklast: Home Assistant Cloud</li>
-<li>Gratis: Tailscale</li>
-<li>Avancerat: Port forwarding</li>
-</ul>
-
-</details>
-</div>
-
-<!-- AUTOMATION -->
-<div class="card section-automation">
-<details>
-<summary>Automationer (valfritt)</summary>
-
-<ul>
-<li>Frostvarning</li>
-<li>Hög luftfuktighet</li>
-<li>Rörelselarm</li>
+<li>Fungerar direkt på samma WiFi</li>
+<li>För åtkomst utanför hemmet krävs extra setup</li>
 </ul>
 
 </details>
