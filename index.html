@@ -13,79 +13,107 @@
   <a href="inkop.html">Inköpslista</a>
 </div>
 
+<div class="card section-pi">
 <details open>
-  <summary>1. Raspberry Pi installation</summary>
+  <summary>🔌 Raspberry Pi installation</summary>
   <ul>
-    <li>Installera Home Assistant via Raspberry Pi Imager</li>
+    <li>Installera Home Assistant via Imager</li>
     <li>Sätt i SD-kort</li>
-    <li>Koppla nätverkskabel</li>
+    <li>Koppla nätverk</li>
     <li>Koppla ström</li>
-    <li>Öppna: <code>http://homeassistant.local:8123</code></li>
+    <li>Öppna: <code>homeassistant.local:8123</code></li>
   </ul>
 </details>
+</div>
 
+<div class="card section-ha">
 <details>
-  <summary>2. Home Assistant setup</summary>
+  <summary>⚙️ Home Assistant setup</summary>
   <ul>
     <li>Skapa konto</li>
     <li>Ställ in plats</li>
-    <li>Kontrollera dashboard</li>
     <li>Installera File Editor + Samba</li>
   </ul>
 </details>
+</div>
 
+<div class="card section-zigbee">
 <details>
-  <summary>3. Zigbee dongle</summary>
+  <summary>📡 Zigbee dongle</summary>
   <ul>
     <li>Koppla via USB-förlängning</li>
-    <li>Settings → Devices & Services</li>
     <li>Add Integration → ZHA</li>
   </ul>
 </details>
+</div>
 
+<div class="card section-sensor">
 <details>
-  <summary>4. Sensorer</summary>
+  <summary>🌡️ Sensorer</summary>
   <ul>
-    <li>Klicka “Add device”</li>
-    <li>Håll in knapp på sensor</li>
+    <li>Add device</li>
+    <li>Håll in knapp</li>
     <li>Placera inne/ute korrekt</li>
   </ul>
 </details>
+</div>
 
+<div class="card section-camera">
 <details>
-  <summary>5. IP-kamera</summary>
+  <summary>📷 Kamera</summary>
   <ul>
     <li>Add Integration</li>
     <li>ONVIF eller RTSP</li>
-    <li>Verifiera bild</li>
   </ul>
 </details>
+</div>
 
+<div class="card section-dashboard">
 <details>
-  <summary>6. Dashboard</summary>
+  <summary>📊 Dashboard</summary>
   <ul>
-    <li>Edit Dashboard</li>
-    <li>Lägg till temperatur inne/ute</li>
+    <li>Lägg till temperatur inne</li>
+    <li>Lägg till temperatur ute</li>
     <li>Lägg till luftfuktighet</li>
     <li>Lägg till kamera</li>
   </ul>
 </details>
+</div>
 
+<div class="card section-backup">
 <details>
-  <summary>7. Backup</summary>
+  <summary>💾 Backup</summary>
   <ul>
     <li>Installera backup addon</li>
-    <li>Aktivera automatiska backuper</li>
+    <li>Aktivera auto backup</li>
   </ul>
 </details>
+</div>
 
+<div class="card section-graph">
 <details>
-  <summary>8. Grafer</summary>
+  <summary>📈 Grafer</summary>
   <ul>
     <li>Add Card → History Graph</li>
-    <li>Välj temperatur + fukt</li>
+    <li>Välj sensorer</li>
   </ul>
 </details>
+</div>
+
+<div class="card checklist">
+  <h3>✔ Progress</h3>
+  <label><input type="checkbox"> Pi installerad</label><br>
+  <label><input type="checkbox"> Home Assistant klar</label><br>
+  <label><input type="checkbox"> Zigbee funkar</label><br>
+  <label><input type="checkbox"> Sensorer kopplade</label><br>
+  <label><input type="checkbox"> Kamera funkar</label><br>
+  <label><input type="checkbox"> Dashboard klar</label><br>
+  <label><input type="checkbox"> Backup aktiv</label><br>
+
+  <div id="progress" class="progress"></div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
