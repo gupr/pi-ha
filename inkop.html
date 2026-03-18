@@ -9,7 +9,7 @@
 
 <h1>Inköpslista</h1>
 <p class="subtitle">
-  All hårdvara som behövs för att bygga systemet
+  Bocka av det du har köpt
 </p>
 
 <div class="nav">
@@ -22,49 +22,41 @@
 <details open>
 <summary>Bas (Raspberry Pi)</summary>
 
-<ul>
-<li><b>Raspberry Pi 5</b> – själva datorn</li>
-<li><b>27W USB-C strömadapter</b> – måste vara rätt modell</li>
-<li><b>microSD 64GB+</b> – lagring (eller SSD senare)</li>
-<li><b>Case med fläkt</b> – kyler ner Pi</li>
-</ul>
+<ul class="checklist">
+<li>
+  <label>
+    <input type="checkbox">
+    <a href="https://www.electrokit.com/raspberry-pi-5-2gb" target="_blank">
+      Raspberry Pi (minst 2GB modellen)
+    </a>
+  </label>
+</li>
 
-<p><b>Tips:</b></p>
-<ul>
-<li>Köp ett “kit” om du vill slippa tänka</li>
-<li>Undvik billiga no-name SD-kort</li>
-</ul>
+<li>
+  <label>
+    <input type="checkbox">
+    <a href="https://www.electrokit.com/stromforsorjning-27w-usb-c-raspberry-pi-vit" target="_blank">
+      Raspberry Pi strömadapter 27W
+    </a>
+  </label>
+</li>
 
-</details>
-</div>
+<li>
+  <label>
+    <input type="checkbox">
+    <a href="https://www.electrokit.com/inbyggnadslada-for-raspberry-pi-5-rod/vit" target="_blank">
+      Pi-inbyggnadslåda med fläkt
+    </a>
+  </label>
+</li>
 
-<!-- STORAGE -->
-<div class="card section-storage">
-<details>
-<summary>Lagring (rekommenderat)</summary>
+<li>
+  <label>
+    <input type="checkbox">
+      MicroSD-kort (minst 64GB)
+  </label>
+</li>
 
-<ul>
-<li><b>USB SSD</b> – mycket bättre än SD-kort</li>
-<li><b>USB till SATA adapter</b> – om SSD används</li>
-</ul>
-
-<p><b>Varför:</b></p>
-<ul>
-<li>Snabbare system</li>
-<li>Mindre risk att det går sönder</li>
-</ul>
-
-</details>
-</div>
-
-<!-- NETWORK -->
-<div class="card section-network">
-<details>
-<summary>Nätverk</summary>
-
-<ul>
-<li><b>Ethernet-kabel</b> – stabilare än WiFi</li>
-<li><b>Router</b> – finns oftast redan hemma</li>
 </ul>
 
 </details>
@@ -75,32 +67,24 @@
 <details>
 <summary>Zigbee</summary>
 
-<ul>
-<li><b>Zigbee USB dongle</b> – kopplar sensorer till systemet</li>
-<li><b>USB-förlängningskabel</b> – minskar störningar</li>
-</ul>
+<ul class="checklist">
 
-<p><b>Tips:</b></p>
-<ul>
-<li>Förlängningskabel är viktigt (annars dålig signal)</li>
-</ul>
+<li>
+  <label>
+    <input type="checkbox">
+    <a href="https://www.inet.se/produkt/8309980/sonoff-zigbee-3-0-usb-dongle-plus" target="_blank">
+      Sonoff Zigbee 3.0 USB Dongle Plus
+    </a>
+  </label>
+</li>
 
-</details>
-</div>
+<li>
+  <label>
+    <input type="checkbox">
+      USB-A förlängning
+  </label>
+</li>
 
-<!-- MESH -->
-<div class="card section-mesh">
-<details>
-<summary>Zigbee räckvidd (valfritt men rekommenderat)</summary>
-
-<ul>
-<li><b>Zigbee smart plug</b> – fungerar som repeater</li>
-</ul>
-
-<p><b>Behövs om:</b></p>
-<ul>
-<li>Sensorer sitter långt bort</li>
-<li>Du har uthus / garage</li>
 </ul>
 
 </details>
@@ -111,61 +95,15 @@
 <details>
 <summary>Sensorer</summary>
 
-<ul>
-<li><b>Temperatur + luftfuktighet</b> (minst 2 st)</li>
-</ul>
+<ul class="checklist">
 
-<p><b>Placering:</b></p>
-<ul>
-<li>En inomhus</li>
-<li>En utomhus</li>
-</ul>
+<li>
+  <label>
+    <input type="checkbox">
+      Sensorer (WIP)
+  </label>
+</li>
 
-<p><b>Tips:</b></p>
-<ul>
-<li>Köp fler direkt om du vill mäta flera rum</li>
-</ul>
-
-</details>
-</div>
-
-<!-- CAMERA -->
-<div class="card section-camera">
-<details>
-<summary>Kamera</summary>
-
-<ul>
-<li><b>IP-kamera</b></li>
-<li><b>PoE (rekommenderas) eller WiFi</b></li>
-</ul>
-
-<p><b>Viktigt:</b></p>
-<ul>
-<li>Måste stödja ONVIF eller RTSP</li>
-</ul>
-
-<p><b>Tips:</b></p>
-<ul>
-<li>PoE = stabilare + en kabel</li>
-</ul>
-
-</details>
-</div>
-
-<!-- EXTRA -->
-<div class="card section-automation">
-<details>
-<summary>Extra (valfritt)</summary>
-
-<ul>
-<li>Fler sensorer</li>
-<li>Smart plugs</li>
-<li>Rörelsesensor</li>
-</ul>
-
-<p><b>Varför:</b></p>
-<ul>
-<li>Ger fler automationer och bättre överblick</li>
 </ul>
 
 </details>
