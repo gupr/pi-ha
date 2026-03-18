@@ -6,9 +6,23 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Snabba fixes */
+    /* Titel + logga */
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .logo {
+      width: 30px;
+      height: 30px;
+    }
+
     h1 {
       font-size: 2.5rem;
+      margin: 0;
     }
 
     .subtitle {
@@ -18,14 +32,35 @@
     }
 
     .nav a {
-      margin: 0 20px; /* mer spacing mellan länkar */
+      margin: 0 20px;
+    }
+
+    /* Mindre knapp */
+    .btn-inline {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      vertical-align: middle;
+      line-height: 1.2;
+    }
+
+    .btn-inline:hover {
+      background: var(--primary-dark);
     }
   </style>
 
 </head>
 <body>
 
-<h1>Pi-Hem</h1>
+<div class="title-row">
+  <img src="ha.png" alt="Home Assistant" class="logo">
+  <h1>Pi-Hem</h1>
+</div>
 
 <p class="subtitle">
   Installation och drift av hemmaväderstation med Raspberry Pi
@@ -46,9 +81,8 @@
 <ol>
 <li>
   Ladda ner Raspberry Pi Imager:
-  <br><br>
-  <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" class="btn">
-    Ladda ner Imager
+  <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" class="btn-inline">
+    Ladda ner
   </a>
 </li>
 
@@ -98,7 +132,7 @@
 
 </details>
 </div>
-
+  
 <!-- HA SETUP -->
 <div class="card section-ha">
 <details>
