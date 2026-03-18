@@ -1,39 +1,15 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f5f7fa;
-  color: #1e293b;
-  max-width: 800px;
+  background: #f1f5f9;
+  color: #0f172a;
+  max-width: 900px;
   margin: auto;
   padding: 2rem;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-details {
-  background: white;
-  border-radius: 12px;
-  padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-summary {
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-ul {
-  margin-top: 0.5rem;
-}
-
-code {
-  background: #e2e8f0;
-  padding: 3px 6px;
-  border-radius: 6px;
 }
 
 .nav {
@@ -42,7 +18,57 @@ code {
 }
 
 .nav a {
-  margin: 0 10px;
   text-decoration: none;
   color: #2563eb;
+  font-weight: 500;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.section-pi { border-left: 6px solid #3b82f6; }
+.section-ha { border-left: 6px solid #10b981; }
+.section-zigbee { border-left: 6px solid #f59e0b; }
+.section-sensor { border-left: 6px solid #8b5cf6; }
+.section-camera { border-left: 6px solid #ef4444; }
+.section-dashboard { border-left: 6px solid #14b8a6; }
+.section-backup { border-left: 6px solid #6366f1; }
+.section-graph { border-left: 6px solid #ec4899; }
+
+.checklist {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.progress {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
 }
