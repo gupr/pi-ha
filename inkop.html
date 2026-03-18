@@ -4,13 +4,52 @@
   <meta charset="UTF-8">
   <title>Inköpslista - Pi-Hem</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Progress bar */
+    .progress-container {
+      max-width: 500px;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+
 </head>
 <body>
 
 <h1>Inköpslista</h1>
+
 <p class="subtitle">
   Bocka av det du har köpt
 </p>
+
+<!-- PROGRESS -->
+<div class="progress-container">
+  <div class="progress-text" id="progressText">0 / 0 klara</div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+</div>
 
 <div class="nav">
   <a href="index.html">← Guide</a>
@@ -23,40 +62,10 @@
 <summary>Bas (Raspberry Pi)</summary>
 
 <ul class="checklist">
-<li>
-  <label>
-    <input type="checkbox">
-    <a href="https://www.electrokit.com/raspberry-pi-5-2gb" target="_blank">
-      Raspberry Pi (minst 2GB modellen)
-    </a>
-  </label>
-</li>
-
-<li>
-  <label>
-    <input type="checkbox">
-    <a href="https://www.electrokit.com/stromforsorjning-27w-usb-c-raspberry-pi-vit" target="_blank">
-      Raspberry Pi strömadapter 27W
-    </a>
-  </label>
-</li>
-
-<li>
-  <label>
-    <input type="checkbox">
-    <a href="https://www.electrokit.com/inbyggnadslada-for-raspberry-pi-5-rod/vit" target="_blank">
-      Pi-inbyggnadslåda med fläkt
-    </a>
-  </label>
-</li>
-
-<li>
-  <label>
-    <input type="checkbox">
-      MicroSD-kort (minst 64GB)
-  </label>
-</li>
-
+<li><label><input type="checkbox"> <a href="https://www.electrokit.com/raspberry-pi-5-2gb" target="_blank">Raspberry Pi (minst 2GB modellen)</a></label></li>
+<li><label><input type="checkbox"> <a href="https://www.electrokit.com/stromforsorjning-27w-usb-c-raspberry-pi-vit" target="_blank">Raspberry Pi strömadapter 27W</a></label></li>
+<li><label><input type="checkbox"> <a href="https://www.electrokit.com/inbyggnadslada-for-raspberry-pi-5-rod/vit" target="_blank">Pi-inbyggnadslåda med fläkt</a></label></li>
+<li><label><input type="checkbox"> MicroSD-kort (minst 64GB)</label></li>
 </ul>
 
 </details>
@@ -68,23 +77,8 @@
 <summary>Zigbee</summary>
 
 <ul class="checklist">
-
-<li>
-  <label>
-    <input type="checkbox">
-    <a href="https://www.inet.se/produkt/8309980/sonoff-zigbee-3-0-usb-dongle-plus" target="_blank">
-      Sonoff Zigbee 3.0 USB Dongle Plus
-    </a>
-  </label>
-</li>
-
-<li>
-  <label>
-    <input type="checkbox">
-      USB-A förlängning
-  </label>
-</li>
-
+<li><label><input type="checkbox"> <a href="https://www.inet.se/produkt/8309980/sonoff-zigbee-3-0-usb-dongle-plus" target="_blank">Sonoff Zigbee 3.0 USB Dongle Plus</a></label></li>
+<li><label><input type="checkbox"> USB-A förlängning</label></li>
 </ul>
 
 </details>
@@ -95,50 +89,19 @@
 <details>
 <summary>Sensorer</summary>
 
-<p><b>Mål:</b> Mäta temperatur och luftfuktighet i hemmet.</p>
-
-<p>
-Vanligt är att samma sensor mäter både <b>temperatur + luftfuktighet</b>.
-</p>
-
-<p><b>Viktigt:</b></p>
-<ul>
-<li>Måste stödja <b>Zigbee</b></li>
-<li>Ska fungera med Home Assistant (ZHA)</li>
+<ul class="checklist">
+<li><label><input type="checkbox"> Temperatur + luftfuktighetssensor (Zigbee)</label></li>
 </ul>
 
 <p><b>Var kan man köpa:</b></p>
 <ul>
-<li>
-  <a href="https://www.kjell.com/se/produkter/smarta-hem/smarta-sensorer" target="_blank">
-    Kjell & Company – sensorer
-  </a>
-</li>
-<li>
-  <a href="https://www.webhallen.com/se/category/15964-Sensorer-och-Tillbehor" target="_blank">
-    Webhallen – sensorer
-  </a>
-</li>
+<li><a href="https://www.kjell.com/se/produkter/smarta-hem/smarta-sensorer" target="_blank">Kjell & Company</a></li>
+<li><a href="https://www.webhallen.com/se/category/15964-Sensorer-och-Tillbehor" target="_blank">Webhallen</a></li>
 </ul>
 
-<ol>
-<li>ZHA → Add Device</li>
-<li>Håll inne pairing-knappen på sensorn</li>
-<li>Vänta tills den dyker upp</li>
-
-<li>Döp tydligt:
-  <ul>
-    <li>Temp Inne</li>
-    <li>Temp Ute</li>
-  </ul>
-</li>
-</ol>
-
-<p><b>Placering:</b></p>
-<ul>
-<li>Utomhus: skydda från regn & direkt sol</li>
-<li>Inomhus: inte nära element eller fönster</li>
-</ul>
+<p style="margin-top:10px;">
+  Viktigt: Måste stödja <b>Zigbee</b> och fungera med Home Assistant.
+</p>
 
 </details>
 </div>
@@ -149,24 +112,35 @@ Vanligt är att samma sensor mäter både <b>temperatur + luftfuktighet</b>.
 <summary>Kamera</summary>
 
 <ul class="checklist">
-
-<li>
-  <label>
-    <input type="checkbox">
-    <a href="https://www.kjell.com/se/produkter/sakerhet-overvakning/kameraovervakning/overvakningskameror/overvakningskameror-utomhus" target="_blank">
-      IP-kamera (utomhus/inomhus)
-    </a>
-  </label>
-</li>
-
+<li><label><input type="checkbox"> <a href="https://www.kjell.com/se/produkter/sakerhet-overvakning/kameraovervakning/overvakningskameror/overvakningskameror-utomhus" target="_blank">IP-kamera (utomhus/inomhus)</a></label></li>
 </ul>
 
 <p style="margin-top:10px;">
-  Tips: Välj kamera som stödjer <b>RTSP eller ONVIF</b> för bästa kompatibilitet.
+  Tips: Välj kamera som stödjer <b>RTSP eller ONVIF</b>.
 </p>
 
 </details>
 </div>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const progressText = document.getElementById('progressText');
+  const progressFill = document.getElementById('progressFill');
+
+  function updateProgress() {
+    const total = checkboxes.length;
+    const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+    progressText.textContent = `${checked} / ${total} klara`;
+    progressFill.style.width = (checked / total) * 100 + "%";
+  }
+
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', updateProgress);
+  });
+
+  updateProgress();
+</script>
 
 </body>
 </html>
