@@ -6,23 +6,9 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Titel + layout */
+    /* Snabba fixes */
     h1 {
       font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .title-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 0.5rem;
-    }
-
-    .logo {
-      width: 32px;
-      height: 32px;
     }
 
     .subtitle {
@@ -32,49 +18,14 @@
     }
 
     .nav a {
-      margin: 0 20px;
-    }
-
-    /* Inline button */
-    .btn-inline {
-      margin-left: 10px;
-      padding: 4px 10px;
-      background: var(--primary);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      vertical-align: middle;
-      transition: all 0.2s ease;
-    }
-
-    .btn-inline:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-    }
-
-    /* Subtle page hover feel */
-    body {
-      transition: background 0.3s ease;
-    }
-
-    .card {
-      transition: all 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+      margin: 0 20px; /* mer spacing mellan länkar */
     }
   </style>
 
 </head>
 <body>
 
-<div class="title-row">
-  <img src="ha.png" alt="Home Assistant" class="logo">
-  <h1>Pi-Hem</h1>
-</div>
+<h1>Pi-Hem</h1>
 
 <p class="subtitle">
   Installation och drift av hemmaväderstation med Raspberry Pi
@@ -95,8 +46,9 @@
 <ol>
 <li>
   Ladda ner Raspberry Pi Imager:
-  <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" class="btn-inline">
-    Ladda ner
+  <br><br>
+  <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer" class="btn">
+    Ladda ner Imager
   </a>
 </li>
 
@@ -147,36 +99,74 @@
 </details>
 </div>
 
+<!-- HA SETUP -->
+<div class="card section-ha">
+<details>
+<summary>Home Assistant setup</summary>
+
+<ol>
+<li>Skapa konto</li>
+
+<li>Ställ in:
+  <ul>
+    <li>Plats</li>
+    <li>Tidszon</li>
+  </ul>
+</li>
+
+<li>Installera tillägg:
+  <ul>
+    <li>File Editor</li>
+    <li>Samba Share</li>
+  </ul>
+</li>
+
+<li>Settings → System → Updates → uppdatera allt</li>
+
+</ol>
+
+<p><b>Tips:</b></p>
+<ul>
+<li>Installera mobilappen</li>
+<li>Döp systemet tydligt</li>
+</ul>
+
+</details>
+</div>
+
+<!-- ZIGBEE -->
+<div class="card section-zigbee">
+<details>
+<summary>Zigbee dongle (ZHA)</summary>
+
+<ol>
+<li>Använd USB-förlängning</li>
+<li>Placera bort från Pi</li>
+
+<li>I Home Assistant:
+  <ul>
+    <li>Settings → Devices & Services</li>
+    <li>Add Integration → ZHA</li>
+  </ul>
+</li>
+
+<li>Välj port (auto funkar oftast)</li>
+
+</ol>
+
+<p><b>Viktigt:</b></p>
+<ul>
+<li>Använd ZHA</li>
+<li>Placering påverkar signal</li>
+</ul>
+
+</details>
+</div>
+
 <!-- SENSOR -->
 <div class="card section-sensor">
 <details>
 <summary>Sensorer</summary>
-
-<p><b>Mål:</b> Mäta temperatur och luftfuktighet.</p>
-
-<p>
-De flesta sensorer mäter både <b>temperatur + luftfuktighet</b>.
-</p>
-
-<p><b>Viktigt:</b></p>
-<ul>
-<li>Måste stödja <b>Zigbee</b></li>
-<li>Ska fungera med Home Assistant (ZHA)</li>
-</ul>
-
-<p><b>Var kan man köpa:</b></p>
-<ul>
-<li>
-  <a href="https://www.kjell.com/se/produkter/smarta-hem/smarta-sensorer" target="_blank">
-    Kjell & Company
-  </a>
-</li>
-<li>
-  <a href="https://www.webhallen.com/se/category/15964-Sensorer-och-Tillbehor" target="_blank">
-    Webhallen
-  </a>
-</li>
-</ul>
 
 <ol>
 <li>ZHA → Add Device</li>
@@ -189,12 +179,108 @@ De flesta sensorer mäter både <b>temperatur + luftfuktighet</b>.
     <li>Temp Ute</li>
   </ul>
 </li>
+
 </ol>
 
 <p><b>Placering:</b></p>
 <ul>
 <li>Utomhus: skydda från regn & sol</li>
 <li>Inomhus: inte nära element</li>
+</ul>
+
+</details>
+</div>
+
+<!-- CAMERA -->
+<div class="card section-camera">
+<details>
+<summary>IP-kamera</summary>
+
+<ol>
+<li>Anslut till nätverk</li>
+<li>Hitta IP-adress</li>
+
+<li>Add Integration:
+  <ul>
+    <li>ONVIF (bäst)</li>
+    <li>eller RTSP</li>
+  </ul>
+</li>
+
+<li>Fyll i login</li>
+
+</ol>
+
+<p><b>Viktigt:</b></p>
+<ul>
+<li>Måste stödja RTSP/ONVIF</li>
+<li>PoE > WiFi</li>
+</ul>
+
+</details>
+</div>
+
+<!-- DASHBOARD -->
+<div class="card section-dashboard">
+<details>
+<summary>Dashboard</summary>
+
+<ol>
+<li>Dashboard → Edit</li>
+<li>Add Card</li>
+
+<li>Lägg till:
+  <ul>
+    <li>Temperatur</li>
+    <li>Luftfuktighet</li>
+    <li>Kamera</li>
+  </ul>
+</li>
+
+</ol>
+
+</details>
+</div>
+
+<!-- GRAPH -->
+<div class="card section-graph">
+<details>
+<summary>Grafer</summary>
+
+<ol>
+<li>Add Card → History Graph</li>
+<li>Välj sensorer</li>
+<li>Ställ tid</li>
+</ol>
+
+</details>
+</div>
+
+<!-- BACKUP -->
+<div class="card section-backup">
+<details>
+<summary>Backup</summary>
+
+<p><b>Mål:</b> Kunna återställa systemet.</p>
+
+<h4>Moln</h4>
+<ol>
+<li>Installera Google Drive Backup</li>
+<li>Logga in</li>
+<li>Aktivera schema</li>
+</ol>
+
+<h4>Lokal</h4>
+<ol>
+<li>Settings → System → Backups</li>
+<li>Create Backup</li>
+<li>Ladda ner</li>
+</ol>
+
+<p><b>Viktigt:</b></p>
+<ul>
+<li>Spara utanför Pi</li>
+<li>Ha minst 2 kopior</li>
 </ul>
 
 </details>
@@ -215,7 +301,7 @@ De flesta sensorer mäter både <b>temperatur + luftfuktighet</b>.
 <p><b>Tips:</b></p>
 <ul>
 <li>Fungerar direkt på samma WiFi</li>
-<li>Extern åtkomst kräver extra setup</li>
+<li>För åtkomst utanför hemmet krävs extra setup</li>
 </ul>
 
 </details>
