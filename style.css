@@ -8,6 +8,8 @@
   --border: #e5e7eb;
 }
 
+/* BASE */
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
@@ -20,8 +22,16 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* NAV */
 
 .nav {
   text-align: center;
@@ -32,7 +42,10 @@ h1 {
   text-decoration: none;
   color: var(--primary-dark);
   font-weight: 500;
+  margin: 0 10px;
 }
+
+/* CARD */
 
 .card {
   background: var(--card);
@@ -40,6 +53,7 @@ h1 {
   padding: 1.2rem 1.4rem;
   margin-bottom: 1rem;
   border: 1px solid var(--border);
+  border-left: 6px solid var(--border);
   transition: all 0.2s ease;
 }
 
@@ -48,16 +62,20 @@ h1 {
   box-shadow: 0 10px 20px rgba(0,0,0,0.04);
 }
 
+/* DETAILS */
+
 details summary {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.05rem;
   list-style: none;
+  position: relative;
 }
 
 details summary::after {
   content: "▸";
-  float: right;
+  position: absolute;
+  right: 0;
   transition: transform 0.2s ease;
 }
 
@@ -68,6 +86,8 @@ details[open] summary::after {
 details[open] summary {
   margin-bottom: 0.6rem;
 }
+
+/* TEXT */
 
 ul, ol {
   padding-left: 1.2rem;
@@ -88,17 +108,8 @@ code {
   font-size: 0.9rem;
 }
 
-/* Section color accents */
-.section-pi { border-left: 5px solid #7bc4a4; }
-.section-ha { border-left: 5px solid #9ad1b5; }
-.section-zigbee { border-left: 5px solid #b7e4c7; }
-.section-sensor { border-left: 5px solid #cdeee0; }
-.section-camera { border-left: 5px solid #a8d5ba; }
-.section-dashboard { border-left: 5px solid #8ecfb0; }
-.section-backup { border-left: 5px solid #74c69d; }
-.section-graph { border-left: 5px solid #95d5b2; }
+/* BUTTON */
 
-/* Buttons */
 .btn {
   display: inline-block;
   margin-top: 10px;
@@ -115,7 +126,8 @@ code {
   background: var(--primary-dark);
 }
 
-/* Links */
+/* LINKS */
+
 a {
   color: var(--primary-dark);
 }
@@ -124,7 +136,8 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Subtle headers inside cards */
+/* SMALL HEADERS */
+
 h4 {
   margin-top: 1rem;
   margin-bottom: 0.3rem;
@@ -132,72 +145,102 @@ h4 {
   color: var(--muted);
 }
 
-/* BASE CARD ACCENT (fallback) */
-.card {
-  border-left: 6px solid #e5e7eb;
+/* CHECKLIST */
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
 }
 
-/* PI - pastel green */
+.checklist li {
+  margin: 10px 0;
+}
+
+.checklist label {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checklist input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.checklist a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px dashed #9ca3af;
+}
+
+.checklist a:hover {
+  border-bottom: 1px solid #374151;
+}
+
+/* PASTEL SECTION COLORS */
+
+/* PI */
 .section-pi {
   border-left-color: #86efac;
 }
 
-/* HA - mint */
+/* HOME ASSISTANT */
 .section-ha {
   border-left-color: #6ee7b7;
 }
 
-/* NETWORK - soft blue */
+/* NETWORK */
 .section-network {
   border-left-color: #93c5fd;
 }
 
-/* STORAGE - soft gray/blue */
+/* STORAGE */
 .section-storage {
   border-left-color: #c7d2fe;
 }
 
-/* ZIGBEE - warm yellow */
+/* ZIGBEE */
 .section-zigbee {
   border-left-color: #fde68a;
 }
 
-/* MESH - orange pastel */
+/* MESH */
 .section-mesh {
   border-left-color: #fdba74;
 }
 
-/* SENSOR - teal */
+/* SENSOR */
 .section-sensor {
   border-left-color: #5eead4;
 }
 
-/* CAMERA - purple */
+/* CAMERA */
 .section-camera {
   border-left-color: #c4b5fd;
 }
 
-/* DASHBOARD - pink */
+/* DASHBOARD */
 .section-dashboard {
   border-left-color: #f9a8d4;
 }
 
-/* GRAPH - sky */
+/* GRAPH */
 .section-graph {
   border-left-color: #7dd3fc;
 }
 
-/* BACKUP - red pastel */
+/* BACKUP */
 .section-backup {
   border-left-color: #fca5a5;
 }
 
-/* REMOTE - indigo */
+/* REMOTE */
 .section-remote {
   border-left-color: #a5b4fc;
 }
 
-/* AUTOMATION - lime */
+/* AUTOMATION */
 .section-automation {
   border-left-color: #bef264;
 }
