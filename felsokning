@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Felsökning - Pi-Hem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Felsökning</h1>
+<p style="text-align:center; color:#6b7280;">
+  Vanliga problem och hur du löser dem
+</p>
+
+<div class="nav">
+  <a href="index.html">← Tillbaka</a>
+</div>
+
+<!-- PI NOT STARTING -->
+<div class="card">
+<details open>
+<summary>Pi startar inte / ingen kontakt</summary>
+
+<p><b>Problem:</b> Du kommer inte åt Home Assistant.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Vänta minst 10 minuter första gången</li>
+<li>Kontrollera att strömadaptern är korrekt</li>
+<li>Kontrollera att Ethernet-kabel är inkopplad</li>
+<li>Testa annan webbläsare</li>
+<li>Testa IP istället för namn (kolla i router)</li>
+</ul>
+
+</details>
+</div>
+
+<!-- CANT ACCESS HA -->
+<div class="card">
+<details>
+<summary>Kan inte öppna homeassistant.local</summary>
+
+<p><b>Problem:</b> Webbadressen fungerar inte.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Använd istället IP-adressen (t.ex. 192.168.x.x:8123)</li>
+<li>Kolla i din routers enhetslista</li>
+<li>Se till att dator och Pi är på samma nätverk</li>
+</ul>
+
+</details>
+</div>
+
+<!-- ZIGBEE NOT FOUND -->
+<div class="card">
+<details>
+<summary>Zigbee dongle hittas inte</summary>
+
+<p><b>Problem:</b> ZHA hittar ingen dongle.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Koppla ur och in donglen</li>
+<li>Starta om Raspberry Pi</li>
+<li>Använd USB-förlängningskabel</li>
+<li>Kontrollera att rätt port är vald</li>
+</ul>
+
+</details>
+</div>
+
+<!-- SENSOR NOT CONNECTING -->
+<div class="card">
+<details>
+<summary>Sensor går inte att para</summary>
+
+<p><b>Problem:</b> Sensorn dyker inte upp.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Håll in pairing-knappen längre</li>
+<li>Flytta sensorn nära donglen</li>
+<li>Byt batteri</li>
+<li>Starta om ZHA</li>
+</ul>
+
+</details>
+</div>
+
+<!-- SENSOR DISCONNECT -->
+<div class="card">
+<details>
+<summary>Sensor tappar kontakt</summary>
+
+<p><b>Problem:</b> Sensorn försvinner ibland.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Lägg till Zigbee repeater (t.ex. smart plug)</li>
+<li>Flytta donglen längre bort från Pi</li>
+<li>Minska avståndet</li>
+</ul>
+
+</details>
+</div>
+
+<!-- CAMERA NOT WORKING -->
+<div class="card">
+<details>
+<summary>Kamera funkar inte</summary>
+
+<p><b>Problem:</b> Ingen bild visas.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Kontrollera att kameran är på nätverket</li>
+<li>Testa ONVIF istället för RTSP</li>
+<li>Kolla användarnamn/lösenord</li>
+<li>Testa kamerans IP i webbläsare</li>
+</ul>
+
+</details>
+</div>
+
+<!-- SLOW SYSTEM -->
+<div class="card">
+<details>
+<summary>Systemet är segt</summary>
+
+<p><b>Problem:</b> Home Assistant känns långsamt.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Använd Ethernet istället för WiFi</li>
+<li>Byt till SSD istället för SD-kort</li>
+<li>Starta om systemet</li>
+</ul>
+
+</details>
+</div>
+
+<!-- BACKUP -->
+<div class="card">
+<details>
+<summary>Backup fungerar inte</summary>
+
+<p><b>Problem:</b> Backuper misslyckas.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Kontrollera internetanslutning</li>
+<li>Logga in igen i backup addon</li>
+<li>Testa skapa backup manuellt</li>
+</ul>
+
+</details>
+</div>
+
+<!-- WIFI ISSUES -->
+<div class="card">
+<details>
+<summary>WiFi problem</summary>
+
+<p><b>Problem:</b> Instabil uppkoppling.</p>
+
+<p><b>Lösning:</b></p>
+<ul>
+<li>Använd Ethernet istället</li>
+<li>Flytta routern närmare</li>
+<li>Undvik att köra både Zigbee och WiFi nära varandra</li>
+</ul>
+
+</details>
+</div>
+
+</body>
+</html>
